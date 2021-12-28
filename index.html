@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Grapple</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu&display=swap" rel="stylesheet">
+  <!-- Using Google fonts   -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <!-- Linking Bootstrap -->
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- NOTE: While Giving links it is very necessary to check the order because the code is executed in order we write it that means if we want to override the bootstrap style then first link bootstrap then give your css styles sheet link -->
+  <!-- NOTE: load the default bootstrap styles, then you can override some of those components with your own custom CSS.Unlike CSS and JavaScript, HTML code is executed from top to bottom so the order of your code matters. -->
+  <script src="https://kit.fontawesome.com/1c9ad4b785.js" crossorigin="anonymous"></script>
+  <!-- NOTE: Font Awesome is a website to use apple or different famous emojis for free -->
+  <!-- NOTE: For font Awesome either use above code or use <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script> -->
+
+  <!-- Script for Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+  <!-- NOTE: These JS and Jquery will help us use the toggle button when we shrink the size of screen -->
+  <link rel="icon" href="images/favicon.ico">
+</head>
+
+<body>
+  <!-- NOTE: Grid System : https://www.udemy.com/course/the-complete-web-development-bootcamp/learn/lecture/12288138#questions/11779176 -->
+  <!-- NOTE: There are total of 12 column possible in one row in a screen so when we give col-md 6 means we want only 2 col each row and when we shrink screen size each col should take 100% width of the screen -->
+  <!-- NOTE: col-lg-3 means in large screen we need 12/3 = 4 columns means 3 unit ke 4 column whereas col-md-4 means in medium size screen we need 3 col of 4 unit each in each row , col-sm-6 means 6 unit each ke 2 coulmn -->
+  <section id="title">
+    <!-- Nav Bar -->
+    <div class="container-fluid">
+      <!-- NOTE: container helps us to create a block in which we can do anything and is self adjustable to the screen size , a container can have its own colour or attributes
+     To study more about different types of containers visit : https://getbootstrap.com/docs/5.1/layout/containers/ -->
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="">Gr <i class="fab fa-apple"></i> </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo02">
+          <!-- NOTE: we use justify-content-end to shift our unordered list in the right , away from anchor tag -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#footer">Contact</a>
+              <!-- NOTE: Here in the href we have used the section id respectively so that on one click we can reach in any section we want -->
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#pricing">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#cta">Download</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!-- Title -->
+      <div class="row">
+        <div class="col-lg-6">
+          <!-- NOTE: Take 50% screen when large screen else take 100% screen -->
+          <h1 class="grab-heading">Grab the world in your hand.</h1>
+          <!-- NOTE: To Know more about Bootstrap Buttons visit : https://getbootstrap.com/docs/5.1/components/buttons/ -->
+          <button type="button" class="btn btn-dark btn-lg download-button"><i class="fab fa-apple"></i> Download</button>
+          <button type="button" class="btn btn-outline-light btn-lg download-button"><i class="fab fa-google-play"></i> Download</button>
+        </div>
+        <div class="col-lg-6">
+          <!-- NOTE: Take 50% screen when large screen else take 100% screen -->
+          <!-- NOTE: <img src="images/iphone6.png" alt="iphone-mockup">  -->
+          <img class="rotate-image" src="https://www.pngall.com/wp-content/uploads/11/iPhone-13-PNG-Picture.png" alt="iphone pic" style="width:500px; height:500px;">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Features -->
+  <section id="features">
+    <div class="row">
+      <div class="feature-box col-lg-4">
+        <i class="fas fa-check-circle fa-3x icons"></i>
+        <!-- NOTE: The part inside <i> is taken from awesome icon website and fa-3x is added to class name to increase size by 3x </i> -->
+        <h3>Easy to use.</h3>
+        <p>Feel The Eliteness.</p>
+      </div>
+      <div class="feature-box col-lg-4">
+        <i class="far fa-smile-beam fa-3x icons"></i>
+        <!-- NOTE: The part inside <i> is taken from awesome icon website and fa-3x is added to class name to increase size by 3x </i> -->
+        <h3>No Cost EMI</h3>
+        <p>Over 5 Lakh+ Products Sold.</p>
+      </div>
+      <div class="feature-box col-lg-4">
+        <i class="fab fa-apple fa-3x icons"></i>
+        <!-- NOTE: The part inside <i> is taken from awesome icon website and fa-3x is added to class name to increase size by 3x </i> -->
+        <h3>Free Apple ipad.</h3>
+        <p>Get Free Apple Products.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Testimonials -->
+
+  <section id="testimonials">
+
+    <h2 class="tagline">THIS CHANGES EVERYTHING.</h2>
+    <img class="test-image" src="https://www.pngall.com/wp-content/uploads/11/iPhone-13-PNG-Cutout.png" alt="iphone 13 pro" style="width=50%;">
+    <!-- <em>iphone 13 pro</em> -->
+  </section>
+
+
+  <!-- Press -->
+
+  <section id="press">
+    <img class="pressimage" src="images/applemusic.png" alt="apple-music" style="width:30%;">
+    <img class="pressimage" src="images/applepay.png" alt="apple-pay" style="width:30%;">
+    <img class="pressimage" src="https://upload.wikimedia.org/wikipedia/commons/4/40/Apple_Store.png" alt="apple-store" style="width:30%;">
+
+  </section>
+
+  <!-- REVIEWS Carousel  -->
+  <section id="reviews">
+    <!-- NOTE: Using Bootstrap Carousel : https://getbootstrap.com/docs/5.1/components/carousel/#options -->
+    <div id="carouselExampleControls" class="carousel slide carousel-dark slide" data-bs-ride="carousel" data-bs-pause="hover" data-bs-interval="1000">
+      <!-- NOTE: all theabove attributes are taken from the options menu of carousel section of bootstrap official documentation : https://getbootstrap.com/docs/5.1/components/carousel/#options  -->
+      <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+          <!-- NOTE: we need to have one item as active so that whenever we move to site we get to see caousel starting from here -->
+          <img src="https://content.fortune.com/wp-content/uploads/2016/06/134443366.jpg" class="d-block" alt="Steve jobs on apple" width="600" height="400">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Steve Jobs</h5>
+            <p>Founder of Grapple</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://static.techspot.com/images2/news/bigimage/2021/11/2021-11-01-image-28.jpg" class="d-block" alt="Steve Wozniak on apple" width="600" height="400">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Steve Wozniak</h5>
+            <p>Founder of Grapple.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://wikinetworth.com/uploads/images/ronald-wayne.jpg" class="d-block" alt="Ronald Wayne on apple" width="600" height="400">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Ronald Wayne</h5>
+            <p>Founder of Grapple.</p>
+
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="https://i.insider.com/5f6a0781323fc4001e0d7b27?width=700" class="d-block" alt="Tim cook on apple" width="600" height="400">
+          <div class="carousel-caption d-none d-md-block">
+            <h5>Tim Cook</h5>
+            <p>CEO of Grapple.</p>
+
+          </div>
+        </div>
+      </div>
+      <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev"> -->
+      <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+        <!-- NOTE: These button are the previous and next button of our website -->
+        <!-- NOTE: aria-hidden = true is basically used for those visually impaired people who cannot see the website
+    so they listen to what is there in the website so we do not want reader to read the "arrow" so we use aria-hidden = "true"  (not necessary)-->
+        <!-- NOTE: This span will tell them its a button which moves to previous (not necessary)  -->
+        <!-- </button> -->
+      </a>
+      <!-- <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next"> -->
+      <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+        <!-- </button> -->
+      </a>
+    </div>
+  </section>
+
+
+  <!-- Pricing -->
+
+  <section id="pricing">
+    <a href="" class="btn noHover">
+    <h2 class="tagapple">The New Apple iPhone is Here</h2>
+    <!-- <p>Simple and affordable price plans for your and your dog.</p> -->
+    </a>
+    <!-- <div class="card-group"> -->
+    <!-- NOTE: Using class card-group we will be able to place our card side by side -->
+    <div class="row price">
+        <div class="col-lg-6 col-md-6">
+          <div class="price-column card">
+            <!-- NOTE: Here we use cards of Bootstrap which is used to create block in which we can paste a image and a text : https://getbootstrap.com/docs/5.1/components/card/ -->
+            <div class="card-header">
+              <h3>iPhone 13</h3>
+            </div>
+            <div class="card-body">
+              <!-- <a href="" class="btn noHover"> -->
+              <img class="iphone13" src="images/iphone13.jpg" alt="iPhone 13" width="400" height="350">
+              <h2 class="pricerange">Starting From 5,000 only</h2>
+              <!-- <h2>Free</h2>
+              <p>5 Matches Per Day</p>
+              <p>10 Messages Per Day</p>
+              <p>Unlimited App Usage</p> -->
+              <button class="btn btn-lg btn-block btn-outline-dark"type="button"><a href="https://www.amazon.in/Apple-iPhone-13-Mini-128GB/dp/B09G99NBNQ/ref=sr_1_1_sspa?crid=1N7VJY2STWLJ9&keywords=iphone+13&qid=1640685637&sprefix=iphone+13%2Caps%2C247&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUE2NlpNMlI4RjU5RFQmZW5jcnlwdGVkSWQ9QTA1NjcyNDUyTldSS0w2MUlRU0xBJmVuY3J5cHRlZEFkSWQ9QTAzMzAyMTIyMlMyWUg0VFkzQ0xLJndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==">Buy Now</a></button>
+              <!-- </a> -->
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-6">
+          <div class="price-column  card">
+            <div class="card-header">
+              <h3>iPhone 13 Pro</h3>
+            </div>
+            <div class="card-body">
+              <!-- <a href="" class="btn noHover"> -->
+                <img class="iphone13pro" src="images/iphone13pro.jpg" alt="iPhone 13 pro" width="600" height="350">
+                <h2 class="pricerange">Starting From 6,000 only</h2>
+              <!-- <h2>$49 / mo</h2>
+              <p>Unlimited Matches</p>
+              <p>Unlimited Messages</p>
+              <p>Unlimited App Usage</p> -->
+              <button class="btn btn-lg btn-block btn-dark" type="button"><a href="https://www.amazon.in/Apple-iPhone-Pro-Max-256GB/dp/B09G94T2NY/ref=sr_1_1_sspa?adgrpid=66314740727&ext_vrnc=hi&gclid=CjwKCAiAiKuOBhBQEiwAId_sK7Q0CIoB77HaTX_-ZPIvfnwAUbGmcYK0Wqp36RSeiFl0sB8n_-qp8xoC3BoQAvD_BwE&hvadid=398059830400&hvdev=c&hvlocphy=9061685&hvnetw=g&hvqmt=e&hvrand=12238983063058527829&hvtargid=kwd-845053439004&hydadcr=24569_1971431&keywords=iphone+13+pro&qid=1640685448&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUEzVURNN1hFME1QNkdGJmVuY3J5cHRlZElkPUEwNDQxNzc4OTZOUjA4QVdQQVpSJmVuY3J5cHRlZEFkSWQ9QTAzMjc5MDQzVExEV05aMzE1UUM5JndpZGdldE5hbWU9c3BfYXRmJmFjdGlvbj1jbGlja1JlZGlyZWN0JmRvTm90TG9nQ2xpY2s9dHJ1ZQ==">Buy Now</a></button>
+              <!-- </a> -->
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
+
+ <!-- Z index Property -->
+ <!-- NOTE: As there is x and y index in a image sameway there is a z index also which specifies that the image will come towrds us or move away from us
+Z index is applied only when there is some position of a element that is positiom is not static , To see which one element will be at the top refer to https://www.w3schools.com/css/css_z-index.asp
+and this pdf : file:///C:/Users/Lokesh%20Melkani/Downloads/Stacking+Order+Flowchart+v2.1.pdf -->
+<!-- NOTE: Making Position absolute will take out the element out of flow of html then other rules will not be applied in it so keep the position relative and to check which one will be at the top refer to pdf above -->
+
+
+
+<!-- Media Query -->
+<!-- NOTE: Nowdays meany people browse websites on mobile phone instead of desktop or laptop so it is very important for us to make responsive websites so that it can work on mobile also beaause this generation is of mobile-first -->
+<!-- NOTE: Link : https://www.w3schools.com/css/css3_mediaqueries.asp -->
+<!-- NOTE: This is not a Bootstap Feature its a Pure CSS concept -->
+<!-- NOTE: @media<type><feature> , Codeply link : https://www.codeply.com/p/Btt3M8fPPo  -->
+
+
+  <!-- Call to Action -->
+
+  <section id="cta">
+
+    <h3 class="cta-heading">Book Your First Grapple iPhone Today.</h3>
+    <button type="button" class="btn btn-lg btn-dark download-button"><i class="fab fa-apple"></i> Download</button>
+    <button type="button" class="btn btn-lg btn-light download-button"><i class="fab fa-google-play"></i> Download</button>
+
+  </section>
+
+
+  <!-- Footer -->
+
+  <footer id="footer">
+
+    <i class="social-icon fab fa-facebook"></i>
+    <i class="social-icon fab fa-twitter"></i>
+    <i class="social-icon fab fa-instagram"></i>
+    <i class="social-icon fas fa-envelope-square"></i>
+    <p>© Copyright 2021 Grapple</p>
+
+  </footer>
+
+<!-- Refracting -->
+<!-- NOTE: Refracting is the habit of making our code more readable , modular and less repeatitive , shorter in length -->
+<!-- NOTE: Seperate all html tages and css tages in style.css
+Make sections and comment them and write code of a particular section under same heading-->
+<!-- NOTE: We can do so by giving custom class to the headings or elements instead of giving some defined attributes to h1 or h2 etc
+To target all h1,h2, etc in one go just do h1,h2,h3,h4,h5,h6 {
+   // This is Multiple Selectors Example
+}-->
+<!-- NOTE: For Reference go to this lecture  : https://www.udemy.com/course/the-complete-web-development-bootcamp/learn/lecture/12299886#overview -->
+<!-- NOTE: Do less repeatition of attributes -->
+<!-- NOTE: If we want to target a class more specific to a id then we can write it like (in styles.css)
+#id.class_name{
+  // This is Hierarchical Selectors Example
+  // code we want to aplly specifically only to this id
+} This is called growing multiple selectors-->
+<!-- NOTE: Combining Seclectors video link : https://www.udemy.com/course/the-complete-web-development-bootcamp/learn/lecture/12299892#overview -->
+<!-- NOTE: Hierarchical Combining
+ Selector1 <space> Selector2 {
+
+} Here Selector1 is parent and Selector2 is child and it can be anything a class or id or we can have custom class or id to a attribute-->
+<!-- NOTE: Another Type of Combining is Combined Selectors where we write as
+Selector1.Selector2 {
+    // No space in between
+} for Combining Element with a class
+Or
+Selector1#Selector2{
+    // No space in between
+} For combing element with id-->
+<!-- NOTE: While Reading Selector2 and Selector1 we Read it Right to Left -->
+
+<!-- Selector Priority -->
+<!-- NOTE: Lecture : https://www.udemy.com/course/the-complete-web-development-bootcamp/learn/lecture/12299910#overview -->
+<!-- NOTE: Selector Priority means the Priority in which thr rules are implemented
+if we override a rule inside same element then the rule written atlast will be diplayed on the screen , class > single_element like h1 etc in Priority but
+class < id in Priority and inline CSS has higher Priority than external and internal CSS -->
+<!-- NOTE: Always name the classes like body-heading not like body heading otherwise it will create unreachable conflicts
+Use ID as minimum as possible only in section or navigation bar or where needed
+Do not Ever use inline CSS if possible -->
+</body>
+
+</html>
